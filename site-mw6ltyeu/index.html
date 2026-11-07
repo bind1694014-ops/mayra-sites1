@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="bn" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>রয়েল বেঙ্গল স্পাইস - গুলশান, ঢাকা | ঐতিহ্যবাহী ও আধুনিক খাবার</title>
+    <meta name="description" content="ঢাকার গুলশানে অবস্থিত রয়্যাল বেঙ্গল স্পাইসে উপভোগ করুন খাঁটি বাঙালি ও মুঘলাই খাবার। সেরা কাচ্চি বিরিয়ানি ও ঐতিহ্যবাহী স্বাদ।">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="রয়েল বেঙ্গল স্পাইস - গুলশান, ঢাকা">
+    <meta property="og:description" content="খাঁটি বাঙালি ও মুঘলাই খাবারের অনবদ্য অভিজ্ঞতা।">
+    <meta property="og:type" content="website">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#b45309', // Amber-700
+                        secondary: '#78350f', // Amber-900
+                        accent: '#d97706', // Amber-600
+                        darkBg: '#121212',
+                        darkCard: '#1e1e1e',
+                    },
+                    fontFamily: {
+                        sans: ['SolaimanLipi', 'Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- FontAwesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        .dark ::-webkit-scrollbar-track {
+            background: #1e1e1e;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #d97706;
+            border-radius: 5px;
+        }
+
+        .hero-pattern {
+            background-color: #000;
+            background-image: radial-gradient(rgba(217, 119, 6, 0.2) 1px, transparent 1px);
+            background-size: 24px 24px;
+        }
+    </style>
+</head>
+<body class="bg-[#faf9f5] text-gray-800 dark:bg-darkBg dark:text-gray-100 transition-colors duration-300 font-sans">
+
+    <!-- Sticky Navbar -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-white/90 dark:bg-darkBg/90 backdrop-blur-md shadow-sm border-b border-gray-100 dark:border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Logo -->
+            <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+                <div class="w-10 h-10 rounded-full bg-amber-600 flex items-center justify-center text-white font-bold text-xl shadow-lg">
+                    র
+                </div>
+                <div>
+                    <span class="text-xl font-bold tracking-tight text-amber-700 dark:text-amber-500">রয়েল বেঙ্গল স্পাইস</span>
+                    <span class="block text-xs text-gray-500 dark:text-gray-400">গুলশান, ঢাকা</span>
+                </div>
+            </a>
+
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex items-center space-x-8 rtl:space-x-reverse font-medium">
+                <a href="#home" class="hover:text-amber-600 transition-colors">হোম</a>
+                <a href="#about" class="hover:text-amber-600 transition-colors">আমাদের সম্পর্কে</a>
+                <a href="#menu" class="hover:text-amber-600 transition-colors">মেনু</a>
+                <a href="#testimonials" class="hover:text-amber-600 transition-colors">মতামত</a>
+                <a href="#faq" class="hover:text-amber-600 transition-colors">প্রশ্নোত্তর</a>
+                <a href="#contact" class="hover:text-amber-600 transition-colors">যোগাযোগ</a>
+            </nav>
+
+            <!-- Actions -->
+            <div class="flex items-center space-x-4 rtl:space-x-reverse">
+                <!-- Theme Toggle -->
+                <button id="theme-toggle" aria-label="Toggle Theme" class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+                    <i id="theme-icon" class="fa-solid fa-moon text-lg text-gray-600 dark:text-amber-400"></i>
+                </button>
+
+                <!-- CTA Button -->
+                <a href="#contact" class="hidden sm:inline-flex items-center justify-center px-5 py-2.5 text-sm font-semibold text-white bg-amber-600 rounded-full shadow-md hover:bg-amber-700 transition-all transform hover:-translate-y-0.5">
+                    টেবিল বুক করুন
+                </a>
+
+                <!-- Mobile Menu Button -->
+                <button id="menu-btn" aria-label="Mobile Menu" class="md:hidden p-2 rounded-lg text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800">
+                    <i class="fa-solid fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-darkCard border-b border-gray-100 dark:border-gray-800 px-4 pt-2 pb-6 space-y-3">
+            <a href="#home" class="block px-3 py-2 rounded-md hover:bg-amber-50 dark:hover:bg-gray-700">হোম</a>
+            <a href="#about" class="block px-3 py-2 rounded-md hover:bg-amber-50 dark:hover:bg-gray-700">আমাদের সম্পর্কে</a>
+            <a href="#menu" class="block px-3 py-2 rounded-md hover:bg-amber-50 dark:hover:bg-gray-700">মেনু</a>
+            <a href="#testimonials" class="block px-3 py-2 rounded-md hover:bg-amber-50 dark:hover:bg-gray-700">মতামত</a>
+            <a href="#faq" class="block px-3 py-2 rounded-md hover:bg-amber-50 dark:hover:bg-gray-700">প্রশ্নোত্তর</a>
+            <a href="#contact" class="block px-3 py-2 rounded-md bg-amber-600 text-white text-center font-medium">টেবিল বুক করুন</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative pt-32 pb-20 md:pt-48 md:pb-32 hero-pattern flex items-center justify-center text-white overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40 z-10"></div>
+        <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&q=80')] bg-cover bg-center opacity-40"></div>
+        
+        <div class="relative z-20 max-w-5xl mx-auto px-4 text-center">
+            <span class="inline-block py-1 px-4 rounded-full bg-amber-600/90 text-white text-sm font-semibold mb-6 tracking-wide shadow-md">
+                ✨ ঢাকার সবচেয়ে প্রিমিয়াম ডাইনিং অভিজ্ঞতা
+            </span>
+            <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight mb-6 leading-tight">
+                খাঁটি মুঘলাই ও বাঙালি <span class="text-amber-500">ঐতিহ্যবাহী স্বাদ</span>
+            </h1>
+            <p class="max-w-2xl mx-auto text-lg sm:text-xl text-gray-200 mb-10 font-light">
+                গুলশানের হৃদয়ে ঐতিহ্যবাহী মশলা আর নিখুঁত রান্নায় তৈরি সুস্বাদু খাবার দিয়ে আপনার ডিনার বা লাঞ্চ করুন স্মরণীয়।
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#menu" class="px-8 py-4 bg-amber-600 hover:bg-amber-700 text-white font-semibold rounded-full shadow-lg transition-transform transform hover:-translate-y-1">
+                    আমাদের মেনু দেখুন 🍽️
+                </a>
+                <a href="#contact" class="px-8 py-4 bg-white/10 hover:bg-white/20 backdrop-blur-md text-white border border-white/30 font-semibold rounded-full transition-all">
+                    টেবিল রিজার্ভেশন 📞
+                </a>
+            </div>
+
+            <!-- Quick Info Badges -->
+            <div class="mt-16 grid grid-cols-2 md:grid-cols-3 gap-6 max-w-3xl mx-auto border-t border-white/10 pt-8 text-sm">
+                <div class="flex items-center justify-center space-x-2 rtl:space-x-reverse">
+                    <i class="fa-solid fa-clock text-amber-500 text-lg"></i>
+                    <span>সকাল ১১টা - রাত ১১টা</span>
+                </div>
+                <div class="flex items-center justify-center space-x-2 rtl:space-x-reverse">
+                    <i class="fa-solid fa-location-dot text-amber-500 text-lg"></i>
+                    <span>রোড ১১, গুলশান-২, ঢাকা</span>
+                </div>
+                <div class="col-span-2 md:col-span-1 flex items-center justify-center space-x-2 rtl:space-x-reverse">
+                    <i class="fa-solid fa-star text-amber-500 text-lg"></i>
+                    <span>৪.৯/৫ কাস্টমার রেটিং</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features / Services -->
+    <section class="py-20 bg-white dark:bg-darkCard transition-colors">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl sm:text-4xl font-bold mb-4">কেন আমাদের পছন্দ করবেন?</h2>
+                <div class="w-20 h-1 bg-amber-600 mx-auto rounded-full mb-4"></div>
+                <p class="text-gray-600 dark:text-gray-400">আমরা শুধুমাত্র খাবার পরিবেশন করি না, তৈরি করি একটি তৃপ্তিদায়ক ডাইনিং অভিজ্ঞতা।</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Feature 1 -->
+                <div class="p-8 rounded-2xl bg-[#faf9f5] dark:bg-darkBg border border-gray-100 dark:border-gray-800 text-center hover:shadow-xl transition-all group">
+                    <div class="w-16 h-16 mx-auto mb-6 rounded-2xl bg-amber-100 dark:bg-amber-900/30 flex items-center justify-center text-amber-600 text-2xl group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-utensils"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">খাঁটি মশলা ও স্বাদ</h3>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm">ঐতিহ্যবাহী রেসিপি ও খাঁটি দেশি মশলায় প্রস্তুতকৃত মুখরোচক সব খাবার।</p>
+                </div>
+                <!-- Feature 2 -->
+                <div class="p-8 rounded-2xl bg-[#faf9f5] dark:bg-darkBg border border-gray-100 dark:border-gray-800 text-center hover:shadow-xl transition-all group">
+                    <div class="w-16 h-16 mx-auto mb-6 rounded-2xl bg-amber-100 dark:bg-amber-900/30 flex items-center justify-center text-amber-600 text-2xl group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-fire-burner"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">দক্ষ ও অভিজ্ঞ শেফ</h3>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm">দেশের স্বনামধন্য শেফদের হাতের জাদুতে তৈরি হয় আমাদের প্রতিটি পদ।</p>
+                </div>
+                <!-- Feature 3 -->
+                <div class="p-8 rounded-2xl bg-[#faf9f5] dark:bg-darkBg border border-gray-100 dark:border-gray-800 text-center hover:shadow-xl transition-all group">
+                    <div class="w-16 h-16 mx-auto mb-6 rounded-2xl bg-amber-100 dark:bg-amber-900/30 flex items-center justify-center text-amber-600 text-2xl group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-motorcycle"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">দ্রুত হোম ডেলিভারি</h3>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm">গুলশান, বনানী, ধানমন্ডি ও বারিধারা এলাকায় গরম গরম হোম ডেলিভারি।</p>
+                </div>
+                <!-- Feature 4 -->
+                <div class="p-8 rounded-2xl bg-[#faf9f5] dark:bg-darkBg border border-gray-100 dark:border-gray-800 text-center hover:shadow-xl transition-all group">
+                    <div class="w-16 h-16 mx-auto mb-6 rounded-2xl bg-amber-100 dark:bg-amber-900/30 flex items-center justify-center text-amber-600 text-2xl group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-face-smile"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">আতিথেয়তা</h3>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm">অতিথি আপ্যায়নে আমাদের রয়েছে অত্যন্ত আন্তরিক ও পেশাদার স্টাফবৃন্দ।</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-[#faf9f5] dark:bg-darkBg transition-colors">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="relative">
+                    <div class="absolute -inset-4 bg-amber-600/20 rounded-3xl transform -rotate-3"></div>
+                    <div class="relative rounded-2xl overflow-hidden shadow-2xl bg-gray-200 dark:bg-gray-800 h-[400px] flex items-center justify-center">
+                        <div class="text-center p-8">
+                            <i class="fa-solid fa-shop text-6xl text-amber-600 mb-4"></i>
+                            <p class="text-xl font-bold">রয়েল বেঙ্গল স্পাইস ইন্টেরিয়র</p>
+                            <p class="text-sm text-gray-500">গুলশান শাখা, ঢাকা</p>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <span class="text-amber-600 font-semibold text-sm tracking-widest uppercase mb-2 block">আমাদের গল্প</span>
+                    <h2 class="text-3xl sm:text-4xl font-bold mb-6">ঢাকার ঐতিহ্যের সাথে আধুনিক ডাইনিংয়ের মেলবন্ধন</h2>
+                    <p class="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed">
+                        ২০১৫ সাল থেকে রয়েল বেঙ্গল স্পাইস ঢাকার ফুডপ্রেমীদের কাছে বিশ্বস্ত নাম। ঐতিহ্যবাহী পুরান ঢাকার স্বাদ আর গুলশানের আধুনিকতার ছোঁয়া মিশিয়ে আমরা তৈরি করেছি এক অনন্য রন্ধনশৈলী। আমাদের প্রতিটি খাবারে ব্যবহার করা হয় বাছাইকৃত মশলা এবং শতভাগ হালাল ও টাটকা উপাদান।
+                    </p>
+                    <div class="grid grid-cols-2 gap-6 mb-8">
+                        <div class="border-l-4 border-amber-600 pl-4">
+                            <h4 class="text-3xl font-extrabold text-amber-600 mb-1">৮+</h4>
+                            <p class="text-sm text-gray-600 dark:text-gray-400">বছরের সফল যাত্রা</p>
+                        </div>
+                        <div class="border-l-4 border-amber-600 pl-4">
+                            <h4 class="text-3xl font-extrabold text-amber-600 mb-1">৫০+</h4>
+                            <p class="text-sm text-gray-600 dark:text-gray-400">বিশেষ মুখরোচক পদ</p>
+                        </div>
+                    </div>
+                    <a href="#menu" class="inline-flex items-center space-x-2 rtl:space-x-reverse font-bold text-amber-600 hover:text-amber-700">
+                        <span>আমাদের জনপ্রিয় মেনু দেখুন</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu & Pricing Section -->
+    <section id="menu" class="py-20 bg-white dark:bg-darkCard transition-colors">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <h2 class="text-3xl sm:text-4xl font-bold mb-4">আমাদের বিশেষ মেনু</h2>
+                <div class="w-20 h-1 bg-amber-600 mx-auto rounded-full mb-4"></div>
+                <p class="text-gray-600 dark:text-gray-400">স্বাদের রাজা কাচ্চি থেকে শুরু করে সুস্বাদু সামুদ্রিক মাছ - সবই মিলবে এক ছাদের নিচে।</p>
+            </div>
+
+            <!-- Filter Tabs -->
+            <div class="flex flex-wrap justify-center gap-3 mb-12">
+                <button onclick="filterMenu('all')" class="menu-tab active px-6 py-2.5 rounded-full font-medium text-sm bg-amber-600 text-white shadow-md transition-all">সবগুলো</button>
+                <button onclick="filterMenu('biryani')" class="menu-tab px-6 py-2.5 rounded-full font-medium text-sm bg-gray-100 dark:bg-darkBg text-gray-700 dark:text-gray-300 hover:bg-amber-100 transition-all">বিরিয়ানি ও পোলাও</button>
+                <button onclick="filterMenu('fish')" class="menu-tab px-6 py-2.5 rounded-full font-medium text-sm bg-gray-100 dark:bg-darkBg text-gray-700 dark:text-gray-300 hover:bg-amber-100 transition-all">মাছের পদ</button>
+                <button onclick="filterMenu('dessert')" class="menu-tab px-6 py-2.5 rounded-full font-medium text-sm bg-gray-100 dark:bg-darkBg text-gray-700 dark:text-gray-300 hover:bg-amber-100 transition-all">ডেজার্ট ও পানীয়</button>
+            </div>
+
+            <!-- Menu Grid -->
+            <div id="menu-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Item 1 -->
+                <div class="menu-item biryani bg-[#faf9f5] dark:bg-darkBg rounded-2xl overflow-hidden border border-gray-100 dark:border-gray-800 shadow-sm hover:shadow-lg transition-all">
+                    <div class="h-48 bg-amber-100 dark:bg-gray-800 flex items-center justify-center text-amber-600 text-4xl">
+                        🍲
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-2">
+                            <h3 class="text-xl font-bold">খাসির শাহী কাচ্চি বিরিয়ানি</h3>
+                            <span class="text-amber-600 font-extrabold text-lg">৳৪৫০</span>
+                        </div>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">নরম খাসির মাংস, সুগন্ধি বাসমতি চাল ও স্পেশাল মসলার নিখুঁত কম্বিনেশন।</p>
+                        <button onclick="orderItem('খাসির শাহী কাচ্চি বিরিয়ানি')" class="w-full py-2.5 bg-amber-600 hover:bg-amber-700 text-white text-sm font-semibold rounded-xl transition-colors">অর্ডার করুন</button>
+                    </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="menu-item biryani bg-[#faf9f5] dark:bg-darkBg rounded-2xl overflow-hidden border border-gray-100 dark:border-gray-800 shadow-sm hover:shadow-lg transition-all">
+                    <div class="h-48 bg-amber-100 dark:bg-gray-800 flex items-center justify-center text-amber-600 text-4xl">
+                        🍛
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-2">
+                            <h3 class="text-xl font-bold">মুরগির স্পেশাল তেহারি</h3>
+                            <span class="text-amber-600 font-extrabold text-lg">৳২৮০</span>
+                        </div>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">পুরান ঢাকার ঐতিহ্যবাহী স্বাদে ভরপুর চিকেন তেহারি সাথে সালাদ।</p>
+                        <button onclick="orderItem('মুরগির স্পেশাল তেহারি')" class="w-full py-2.5 bg-amber-600 hover:bg-amber-700 text-white text-sm font-semibold rounded-xl transition-colors">অর্ডার করুন</button>
+                    </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="menu-item fish bg-[#faf9f5] dark:bg-darkBg rounded-2xl overflow-hidden border border-gray-100 dark:border-gray-800 shadow-sm hover:shadow-lg transition-all">
+                    <div class="h-48 bg-amber-100 dark:bg-gray-800 flex items-center justify-center text-amber-600 text-4xl">
+                        🐟
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-2">
+                            <h3 class="text-xl font-bold">সর্ষে ইলিশ</h3>
+                            <span class="text-amber-600 font-extrabold text-lg">৳৫৫০</span>
+                        </div>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">পদ্মার তাজা ইলিশ সর্ষে ও কাঁচামরিচের গ্রেভিতে মাখানো।</p>
+                        <button onclick="orderItem('সর্ষে ইলিশ')" class="w-full py-2.5 bg-amber-600 hover:bg-amber-700 text-white text-sm font-semibold rounded-xl transition-colors">অর্ডার করুন</button>
+                    </div>
+                </div>
+
+                <!-- Item 4 -->
+                <div class="menu-item fish bg-[#faf9f5] dark:bg-darkBg rounded-2xl overflow-hidden border border-gray-100 dark:border-gray-800 shadow-sm hover:shadow-lg transition-all">
+                    <div class="h-48 bg-amber-100 dark:bg-gray-800 flex items-center justify-center text-amber-600 text-4xl">
+                        🍤
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-2">
+                            <h3 class="text-xl font-bold">চিংড়ি মালাইকারি</h3>
+                            <span class="text-amber-600 font-extrabold text-lg">৳৪৮০</span>
+                        </div>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">বড় গলদা চিংড়ি নারকেলের দুধ ও মৃদু মশলায় তৈরি সুস্বাদু পদ।</p>
+                        <button onclick="orderItem('চিংড়ি মালাইকারি')" class="w-full py-2.5 bg-amber-600 hover:bg-amber-700 text-white text-sm font-semibold rounded-xl transition-colors">অর্ডার করুন</button>
+                    </div>
+                </div>
+
+                <!-- Item 5 -->
+                <div class="menu-item dessert bg-[#faf9f5] dark:bg-darkBg rounded-2xl overflow-hidden border border-gray-100 dark:border-gray-800 shadow-sm hover:shadow-lg transition-all">
+                    <div class="h-48 bg-amber-100 dark:bg-gray-800 flex items-center justify-center text-amber-600 text-4xl">
+                        🍮
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-2">
+                            <h3 class="text-xl font-bold">শাহী জর্দা ও মিষ্টি</h3>
+                            <span class="text-amber-600 font-extrabold text-lg">৳২২০</span>
+                        </div>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">খোয়া ক্ষীর ও কাজুবাদাম সম্বলিত জিভে জল আনা শাহী জর্দা।</p>
+                        <button onclick="orderItem('শাহী জর্দা ও মিষ্টি')" class="w-full py-2.5 bg-amber-600 hover:bg-amber-700 text-white text-sm font-semibold rounded-xl transition-colors">অর্ডার করুন</button>
+                    </div>
+                </div>
+
+                <!-- Item 6 -->
+                <div class="menu-item dessert bg-[#faf9f5] dark:bg-darkBg rounded-2xl overflow-hidden border border-gray-100 dark:border-gray-800 shadow-sm hover:shadow-lg transition-all">
+                    <div class="h-48 bg-amber-100 dark:bg-gray-800 flex items-center justify-center text-amber-600 text-4xl">
+                        🥤
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-2">
+                            <h3 class="text-xl font-bold">বোরহানি ও লাচ্ছি</h3>
+                            <span class="text-amber-600 font-extrabold text-lg">৳১২০</span>
+                        </div>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">ঐতিহ্যবাহী মশলাযুক্ত স্পেশাল টক বোরহানি।</p>
+                        <button onclick="orderItem('বোরহানি ও লাচ্ছি')" class="w-full py-2.5 bg-amber-600 hover:bg-amber-700 text-white text-sm font-semibold rounded-xl transition-colors">অর্ডার করুন</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-20 bg-[#faf9f5] dark:bg-darkBg transition-colors">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl sm:text-4xl font-bold mb-4">আমাদের গ্রাহকদের মতামত</h2>
+                <div class="w-20 h-1 bg-amber-600 mx-auto rounded-full mb-4"></div>
+                <p class="text-gray-600 dark:text-gray-400">আমাদের খাবার ও সেবা নিয়ে গুলশানের সম্মানিত অতিথিরা কী বলছেন।</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Review 1 -->
+                <div class="p-8 bg-white dark:bg-darkCard rounded-2xl shadow-sm border border-gray-100 dark:border-gray-800 relative">
+                    <div class="text-amber-500 mb-4 flex space-x-1">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm mb-6 italic">"ঢাকার মধ্যে সবচেয়ে সুস্বাদু কাচ্চি বিরিয়ানি এখানেই পাওয়া যায়। পরিবেশ এবং স্টাফদের ব্যবহার অত্যন্ত চমৎকার।"</p>
+                    <div class="flex items-center space-x-3">
+                        <div class="w-12 h-12 bg-amber-600 rounded-full flex items-center justify-center text-white font-bold">ত</div>
+                        <div>
+                            <h4 class="font-bold text-sm">তানভীর আহমেদ</h4>
+                            <p class="text-xs text-gray-500">গুলশান, ঢাকা</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="p-8 bg-white dark:bg-darkCard rounded-2xl shadow-sm border border-gray-100 dark:border-gray-800 relative">
+                    <div class="text-amber-500 mb-4 flex space-x-1">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm mb-6 italic">"পরিবার নিয়ে ডিনারে গিয়েছিলাম। সর্ষে ইলিশের স্বাদ মুখে লেগে থাকার মতো। সবাইকে এখানে আসার আমন্ত্রণ জানাচ্ছি।"</p>
+                    <div class="flex items-center space-x-3">
+                        <div class="w-12 h-12 bg-amber-600 rounded-full flex items-center justify-center text-white font-bold">না</div>
+                        <div>
+                            <h4 class="font-bold text-sm">নুসরাত জাহান</h4>
+                            <p class="text-xs text-gray-500">বনানী, ঢাকা</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="p-8 bg-white dark:bg-darkCard rounded-2xl shadow-sm border border-gray-100 dark:border-gray-800 relative">
+                    <div class="text-amber-500 mb-4 flex space-x-1">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm mb-6 italic">"অফিসের লাッチ পার্সেল নিয়েছিলাম। হোম ডেলিভারি খুবই দ্রুত ছিল এবং খাবার গরম ও ফ্রেশ পেয়েছি। দারুণ অভিজ্ঞতা!"</p>
+                    <div class="flex items-center space-x-3">
+                        <div class="w-12 h-12 bg-amber-600 rounded-full flex items-center justify-center text-white font-bold">সা</div>
+                        <div>
+                            <h4 class="font-bold text-sm">সাকিব আল হাসান</h4>
+                            <p class="text-xs text-gray-500">বসুন্ধরা, ঢাকা</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-20 bg-white dark:bg-darkCard transition-colors">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl sm:text-4xl font-bold mb-4">সাধারণ জিজ্ঞাসা (FAQ)</h2>
+                <div class="w-20 h-1 bg-amber-600 mx-auto rounded-full mb-4"></div>
+                <p class="text-gray-600 dark:text-gray-400">আপনার মনে থাকা বিভিন্ন প্রশ্নের উত্তর জেনে নিন।</p>
+            </div>
+
+            <div class="space-y-4">
+                <!-- FAQ 1 -->
+                <div class="border border-gray-200 dark:border-gray-700 rounded-2xl overflow-hidden">
+                    <button onclick="toggleFaq(1)" class="w-full flex justify-between items-center p-5 text-left font-bold focus:outline-none">
+                        <span>টেবিল বুকিংয়ের নিয়ম কী?</span>
+                        <i id="faq-icon-1" class="fa-solid fa-chevron-down transition-transform"></i>
+                    </button>
+                    <div id="faq-content-1" class="hidden px-5 pb-5 text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
+                        আপনি আমাদের ওয়েবসাইট থেকে ফর্ম পূরণ করে অথবা সরাসরি হটলাইনে কল করে টেবিল বুক করতে পারেন। ছুটির দিনগুলোতে অগ্রিম বুকিং করা শ্রেয়।
+                    </div>
+                </div>
+
+                <!-- FAQ 2 -->
+                <div class="border border-gray-200 dark:border-gray-700 rounded-2xl overflow-hidden">
+                    <button onclick="toggleFaq(2)" class="w-full flex justify-between items-center p-5 text-left font-bold focus:outline-none">
+                        <span>কোথায় কোথায় হোম ডেলিভারি দেওয়া হয়?</span>
+                        <i id="faq-icon-2" class="fa-solid fa-chevron-down transition-transform"></i>
+                    </button>
+                    <div id="faq-content-2" class="hidden px-5 pb-5 text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
+                        আমরা গুলশান, বনানী, বারিধারা, মহাখালী, ধানমন্ডি ও উত্তরা এলাকায় দ্রুত হোম ডেলিভারি দিয়ে থাকি।
+                    </div>
+                </div>
+
+                <!-- FAQ 3 -->
+                <div class="border border-gray-200 dark:border-gray-700 rounded-2xl overflow-hidden">
+                    <button onclick="toggleFaq(3)" class="w-full flex justify-between items-center p-5 text-left font-bold focus:outline-none">
+                        <span>পার্কিং সুবিধা আছে কি?</span>
+                        <i id="faq-icon-3" class="fa-solid fa-chevron-down transition-transform"></i>
+                    </button>
+                    <div id="faq-content-3" class="hidden px-5 pb-5 text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
+                        হ্যাঁ, আমাদের রেস্টুরেন্টের সামনে অতিথিদের গাড়ি পার্কিংয়ের জন্য পর্যাপ্ত এবং নিরাপদ ব্যবস্থা রয়েছে।
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Reservation Form Section -->
+    <section id="contact" class="py-20 bg-[#faf9f5] dark:bg-darkBg transition-colors">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- Info -->
+                <div>
+                    <span class="text-amber-600 font-semibold text-sm tracking-widest uppercase mb-2 block">যোগাযোগ করুন</span>
+                    <h2 class="text-3xl sm:text-4xl font-bold mb-6">টেবিল রিজার্ভ করুন অথবা আমাদের সাথে কথা বলুন</h2>
+                    <p class="text-gray-600 dark:text-gray-400 mb-8 leading-relaxed">
+                        যেকোনো পার্টি, জন্মদিন কিংবা ফ্যামিলি ডিনারের জন্য আজই আপনার টেবিল বুক করুন। আমরা প্রস্তুত আপনার সেবায়।
+                    </p>
+
+                    <div class="space-y-6">
+                        <div class="flex items-start space-x-4 rtl:space-x-reverse">
+                            <div class="w-12 h-12 bg-amber-100 dark:bg-amber-900/30 rounded-xl flex items-center justify-center text-amber-600 text-xl flex-shrink-0">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg">ঠিকানা</h4>
+                                <p class="text-gray-600 dark:text-gray-400 text-sm">হাউস ১২, রোড ১১, ব্লক ডি, গুলশান-২, ঢাকা-১২১২</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4 rtl:space-x-reverse">
+                            <div class="w-12 h-12 bg-amber-100 dark:bg-amber-900/30 rounded-xl flex items-center justify-center text-amber-600 text-xl flex-shrink-0">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg">ফোন নাম্বার</h4>
+                                <p class="text-gray-600 dark:text-gray-400 text-sm">+৮৮ ০১৭০০ ১২৩৪৫৬, +৮৮ ০২ ৯৮৮১২৩৪</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4 rtl:space-x-reverse">
+                            <div class="w-12 h-12 bg-amber-100 dark:bg-amber-900/30 rounded-xl flex items-center justify-center text-amber-600 text-xl flex-shrink-0">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg">ইমেইল</h4>
+                                <p class="text-gray-600 dark:text-gray-400 text-sm">info@royalbengalspice.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Form -->
+                <div class="bg-white dark:bg-darkCard p-8 rounded-3xl shadow-xl border border-gray-100 dark:border-gray-800">
+                    <h3 class="text-2xl font-bold mb-6">টেবিল রিজার্ভেশন ফর্ম</h3>
+                    
+                    <form id="reservation-form" onsubmit="handleFormSubmit(event)" class="space-y-4">
+                        <div>
+                            <label class="block text-sm font-medium mb-1">আপনার নাম *</label>
+                            <input type="text" id="name" required class="w-full px-4 py-3 rounded-xl bg-gray-50 dark:bg-darkBg border border-gray-200 dark:border-gray-700 focus:outline-none focus:border-amber-600">
+                        </div>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-sm font-medium mb-1">ফোন নাম্বার *</label>
+                                <input type="tel" id="phone" required class="w-full px-4 py-3 rounded-xl bg-gray-50 dark:bg-darkBg border border-gray-200 dark:border-gray-700 focus:outline-none focus:border-amber-600">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium mb-1">অতিথির সংখ্যা *</label>
+                                <select id="guests" class="w-full px-4 py-3 rounded-xl bg-gray-50 dark:bg-darkBg border border-gray-200 dark:border-gray-700 focus:outline-none focus:border-amber-600">
+                                    <option value="1">১ জন</option>
+                                    <option value="2" selected>২ জন (দম্পতি)</option>
+                                    <option value="4">৪ জন পরিবার</option>
+                                    <option value="8">৮+ জন (গ্রুপ)</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-sm font-medium mb-1">তারিখ *</label>
+                                <input type="date" id="date" required class="w-full px-4 py-3 rounded-xl bg-gray-50 dark:bg-darkBg border border-gray-200 dark:border-gray-700 focus:outline-none focus:border-amber-600">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium mb-1">সময় *</label>
+                                <input type="time" id="time" required class="w-full px-4 py-3 rounded-xl bg-gray-50 dark:bg-darkBg border border-gray-200 dark:border-gray-700 focus:outline-none focus:border-amber-600">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium mb-1">বিশেষ কোনো অনুরোধ (ঐচ্ছিক)</label>
+                            <textarea id="notes" rows="3" class="w-full px-4 py-3 rounded-xl bg-gray-50 dark:bg-darkBg border border-gray-200 dark:border-gray-700 focus:outline-none focus:border-amber-600"></textarea>
+                        </div>
+                        <button type="submit" class="w-full py-4 bg-amber-600 hover:bg-amber-700 text-white font-bold rounded-xl shadow-lg transition-all">
+                            বুকিং নিশ্চিত করুন 🚀
+                        </button>
+                    </form>
+                    <div id="form-success" class="hidden mt-4 p-4 bg-green-100 text-green-700 rounded-xl text-center font-medium">
+                        ধন্যবাদ! আপনার টেবিল বুকিং সফলভাবে গ্রহণ করা হয়েছে। আমরা শীঘ্রই যোগাযোগ করব।
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-12 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center space-x-3 rtl:space-x-reverse mb-4">
+                        <div class="w-10 h-10 rounded-full bg-amber-600 flex items-center justify-center text-white font-bold text-xl">
+                            র
+                        </div>
+                        <span class="text-xl font-bold text-white">রয়েল বেঙ্গল স্পাইস</span>
+                    </div>
+                    <p class="text-sm text-gray-400 mb-4">গুলশানের স্বনামধন্য রেস্টুরেন্ট, যেখানে মিলবে ঐতিহ্যবাহী খাঁটি বাঙালি স্বাদ।</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-amber-600 hover:text-white transition-colors"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-amber-600 hover:text-white transition-colors"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-amber-600 hover:text-white transition-colors"><i class="fa-brands fa-whatsapp"></i></a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold mb-4">দ্রুত লিংক</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#home" class="hover:text-amber-500 transition-colors">হোম</a></li>
+                        <li><a href="#about" class="hover:text-amber-500 transition-colors">আমাদের সম্পর্কে</a></li>
+                        <li><a href="#menu" class="hover:text-amber-500 transition-colors">মেনু</a></li>
+                        <li><a href="#testimonials" class="hover:text-amber-500 transition-colors">মতামত</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold mb-4">জনপ্রিয় পদসমূহ</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#menu" class="hover:text-amber-500 transition-colors">খাসির কাচ্চি বিরিয়ানি</a></li>
+                        <li><a href="#menu" class="hover:text-amber-500 transition-colors">সর্ষে ইলিশ</a></li>
+                        <li><a href="#menu" class="hover:text-amber-500 transition-colors">চিংড়ি মালাইকারি</a></li>
+                        <li><a href="#menu" class="hover:text-amber-500 transition-colors">শাহী জর্দা</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold mb-4">খোলার সময়</h4>
+                    <p class="text-sm text-gray-400 mb-2">সোম - রবি: সকাল ১১:০০ - রাত ১১:০০</p>
+                    <p class="text-sm text-gray-400">ছুটির দিনগুলোতেও খোলা থাকে।</p>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 pt-8 text-center text-sm text-gray-500">
+                &copy; ২০২৪ রয়েল বেঙ্গল স্পাইস, গুলশান, ঢাকা। সর্বস্বত্ব সংরক্ষিত।
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Interactions -->
+    <script>
+        // Theme Toggle Logic with try/catch for localStorage
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const themeIcon = document.getElementById('theme-icon');
+        const htmlElement = document.documentElement;
+
+        try {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                htmlElement.classList.add('dark');
+                themeIcon.className = "fa-solid fa-sun text-lg text-amber-400";
+            }
+        } catch (e) {
+            console.error('LocalStorage error:', e);
+        }
+
+        themeToggleBtn.addEventListener('click', () => {
+            htmlElement.classList.toggle('dark');
+            const isDark = htmlElement.classList.contains('dark');
+            themeIcon.className = isDark ? "fa-solid fa-sun text-lg text-amber-400" : "fa-solid fa-moon text-lg text-gray-600";
+            try {
+                localStorage.setItem('theme', isDark ? 'dark' : 'light');
+            } catch (e) {
+                console.error('LocalStorage error:', e);
+            }
+        });
+
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu on link click
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Menu Filtering
+        function filterMenu(category) {
+            const items = document.querySelectorAll('.menu-item');
+            const tabs = document.querySelectorAll('.menu-tab');
+
+            tabs.forEach(tab => {
+                tab.classList.remove('bg-amber-600', 'text-white', 'shadow-md');
+                tab.classList.add('bg-gray-100', 'dark:bg-darkBg', 'text-gray-700', 'dark:text-gray-300');
+            });
+            event.target.classList.remove('bg-gray-100', 'dark:bg-darkBg', 'text-gray-700', 'dark:text-gray-300');
+            event.target.classList.add('bg-amber-600', 'text-white', 'shadow-md');
+
+            items.forEach(item => {
+                if (category === 'all' || item.classList.contains(category)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+
+        // Order item alert
+        function orderItem(itemName) {
+            alert(`আপনার "${itemName}" অর্ডার করার জন্য ধন্যবাদ! আমাদের প্রতিনিধি খুব শীঘ্রই আপনার সাথে যোগাযোগ করবেন।`);
+        }
+
+        // FAQ Toggle
+        function toggleFaq(id) {
+            const content = document.getElementById(`faq-content-${id}`);
+            const icon = document.getElementById(`faq-icon-${id}`);
+            content.classList.toggle('hidden');
+            icon.classList.toggle('rotate-180');
+        }
+
+        // Form Submit Handler
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            const form = document.getElementById('reservation-form');
+            const successMsg = document.getElementById('form-success');
+            
+            form.style.display = 'none';
+            successMsg.classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>
